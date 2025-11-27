@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>PACK DR SOLUÇÕES – Ferramentas de TI (Versão Profissional)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pack completo com ferramentas de TI, PDFs exclusivos, modelos profissionais e utilitários essenciais para técnicos de informática.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      padding: 24px 0 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #f9fafb;
+    }
+
+    header p.sub {
+      margin-top: 8px;
+      color: #9ca3af;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      margin-top: 24px;
+      padding: 24px;
+      background: radial-gradient(circle at top left, #1d4ed8, #020617);
+      border-radius: 16px;
+      border: 1px solid #1f2937;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-text {
+      flex: 1 1 260px;
+    }
+
+    .hero-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 0.98rem;
+      color: #e5e7eb;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #10b98122;
+      color: #6ee7b7;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #10b98155;
+      margin-bottom: 10px;
+    }
+
+    .price-box {
+      margin-top: 16px;
+      padding: 16px;
+      background: #020617bb;
+      border-radius: 12px;
+      border: 1px dashed #1d4ed8;
+    }
+
+    .price-box .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #9ca3af;
+      letter-spacing: 0.03em;
+    }
+
+    .price-box .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #22c55e;
+      margin: 4px 0;
+    }
+
+    .price-box .old {
+      font-size: 0.9rem;
+      text-decoration: line-through;
+      color: #9ca3af;
+    }
+
+    .hero-cta {
+      margin-top: 14px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(34, 197, 94, 0.45);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 15px 35px rgba(34, 197, 94, 0.6);
+      filter: brightness(1.03);
+    }
+
+    .btn-sub {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .hero-image {
+      flex: 1 1 240px;
+      min-width: 220px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-card {
+      width: 100%;
+      max-width: 320px;
+      background: #020617cc;
+      border-radius: 16px;
+      padding: 18px;
+      border: 1px solid #1f2937;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.8);
+    }
+
+    .hero-card h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+
+    .hero-card li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .hero-card li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 0.75rem;
+      color: #22c55e;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #f9fafb;
+    }
+
+    section p {
+      font-size: 0.95rem;
+      color: #d1d5db;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid #1f2937;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .card p,
+    .card ul {
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+
+    .card ul {
+      list-style: disc;
+      padding-left: 18px;
+    }
+
+    .highlight {
+      color: #22c55e;
+      font-weight: 600;
+    }
+
+    .benefits-list {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .benefits-list li {
+      margin-bottom: 6px;
+      padding-left: 18px;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .benefits-list li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      color: #22c55e;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .testimonial {
+      background: #020617;
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid #1f2937;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 8px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+    }
+
+    .guarantee {
+      background: #022c22;
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #16a34a;
+      margin-top: 20px;
+    }
+
+    .guarantee h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .cta-final {
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .cta-final p {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px 0 10px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b7280;
+      border-top: 1px solid #111827;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PACK DR SOLUÇÕES – Ferramentas de TI (Versão Profissional)</h1>
+      <p class="sub">Pack completo com ferramentas de TI, PDFs exclusivos, modelos profissionais e utilitários essenciais.</p>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-text">
+          <div class="badge">Para técnicos de informática e suporte em TI</div>
+          <h2>Acelere seus atendimentos e entregue serviços muito mais profissionais.</h2>
+          <p>
+            Tenha em um só lugar as principais ferramentas, documentos e utilitários que você precisa no dia a dia:
+            organização, velocidade e resultado em cada atendimento.
+          </p>
+
+          <div class="price-box">
+            <div class="label">Oferta especial de lançamento</div>
+            <div class="price">R$ 19,90</div>
+            <div class="old">De R$ 49,90 por apenas R$ 19,90 hoje.</div>
+          </div>
+
+          <div class="hero-cta">
+            <!-- TROCAR O # PELO LINK DO CHECKOUT DO CAKTO -->
+            <a class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+              QUERO ACESSAR O PACK AGORA
+            </a>
+            <span class="btn-sub">Pagamento único • Acesso imediato ao conteúdo</span>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="hero-card">
+            <h3>Dentro do PACK DR SOLUÇÕES você encontra:</h3>
+            <ul>
+              <li>Ferramentas essenciais de manutenção e diagnóstico</li>
+              <li>PDFs com passos e procedimentos de TI</li>
+              <li>Modelos prontos de contrato, checklist e orçamento</li>
+              <li>Lista de programas indispensáveis para formatação</li>
+              <li>Utilitários para deixar seu trabalho mais rápido e organizado</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- O QUE VOCÊ RECEBE -->
+      <section>
+        <h2>O que você vai receber ao acessar o Pack</h2>
+        <p>Todo o material foi pensado para o dia a dia de quem presta serviços de TI, manutenção de computadores, notebooks, redes e suporte em geral.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>🛠️ Ferramentas de TI</h3>
+            <ul>
+              <li>Softwares profissionais para manutenção e diagnóstico.</li>
+              <li>Aplicativos para otimização de sistema e limpeza.</li>
+              <li>Utilitários para testes, análise e organização.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>📚 PDFs Exclusivos</h3>
+            <ul>
+              <li>Guias passo a passo para procedimentos comuns.</li>
+              <li>Checklist de conferência antes e depois do serviço.</li>
+              <li>Anotações técnicas essenciais para consultas rápidas.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>📂 Modelos Profissionais</h3>
+            <ul>
+              <li>Modelos de contrato de prestação de serviço.</li>
+              <li>Termo de responsabilidade para segurança jurídica.</li>
+              <li>Orçamento pronto para enviar aos clientes.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFÍCIOS -->
+      <section>
+        <h2>Por que esse Pack é ideal para você?</h2>
+        <p>Se você quer parar de perder tempo procurando ferramentas, documentos e programas em vários lugares, esse pack foi feito exatamente para o seu dia a dia.</p>
+
+        <ul class="benefits-list">
+          <li><span class="highlight">Economia de tempo:</span> tudo organizado em um só lugar.</li>
+          <li><span class="highlight">Mais profissionalismo:</span> documentos bonitos e bem feitos para seus clientes.</li>
+          <li><span class="highlight">Mais segurança:</span> termos e contratos que protegem você e o cliente.</li>
+          <li><span class="highlight">Mais valor percebido:</span> seu serviço deixa de ser “apenas formatar” e vira uma solução completa.</li>
+          <li><span class="highlight">Ideal para iniciantes e experientes:</span> tanto quem está começando quanto quem já trabalha há anos em TI.</li>
+        </ul>
+      </section>
+
+      <!-- PROVA SOCIAL -->
+      <section>
+        <h2>O que outros técnicos dizem</h2>
+        <p>Alguns depoimentos de quem utiliza materiais como esses no dia a dia:</p>
+
+        <div class="testimonials">
+          <div class="testimonial">
+            “Depois que organizei meu atendimento com modelos de contrato, checklist e orçamento, meus clientes passaram a me ver como uma empresa séria, não só um técnico.”
+            <strong>Técnico Autônomo</strong>
+          </div>
+          <div class="testimonial">
+            “Ter programas e PDFs organizados me economizou muito tempo na formatação e na hora de explicar o serviço para o cliente. Facilita demais.”
+            <strong>Suporte em TI</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- GARANTIA -->
+      <section>
+        <div class="guarantee">
+          <h3>🔒 Garantia de 7 dias</h3>
+          <p>
+            Você pode acessar todo o conteúdo com tranquilidade. Se dentro de 7 dias achar que o material não ajudou em nada,
+            pode solicitar reembolso. Simples assim, sem burocracia.
+          </p>
+          <p><strong>O risco é zero. Ou o Pack ajuda você, ou você recebe seu dinheiro de volta.</strong></p>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="cta-final">
+        <p><strong>Pronto para profissionalizar seus atendimentos e ter tudo organizado em um único Pack?</strong></p>
+        <!-- TROCAR O # PELO LINK DO CHECKOUT DO CAKTO -->
+        <a class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+          SIM, QUERO O PACK DR SOLUÇÕES
+        </a>
+        <p style="margin-top: 8px; font-size: 0.85rem; color: #9ca3af;">
+          Pagamento único • Acesso imediato • Conteúdo digital
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      PACK DR SOLUÇÕES – Ferramentas de TI (Versão Profissional) • Conteúdo digital para profissionais de TI.
+    </footer>
+  </div>
+</body>
+</html>
